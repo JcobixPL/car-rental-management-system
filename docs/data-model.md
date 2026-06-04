@@ -133,3 +133,7 @@ A pricing record stores:
 When a reservation is created, the system uses the currently applicable pricing record.
 
 The calculated reservation price is stored as a price snapshot and is not changed by later pricing updates.
+
+Vehicle category pricing is shared across the entire rental company.
+
+Branches do not define separate prices for the same vehicle category.
