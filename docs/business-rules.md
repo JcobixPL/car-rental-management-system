@@ -91,3 +91,9 @@ A customer with an unpaid outstanding balance cannot create a new reservation un
 The vehicle deposit is paid during vehicle pickup.
 
 The final deposit amount is calculated at pickup because it may be reduced by the selected insurance package.
+
+## Outstanding Balance Payment
+
+A customer can pay an outstanding balance online or through an employee at a rental branch.
+
+After the outstanding balance is fully paid, the customer can create new reservations.
