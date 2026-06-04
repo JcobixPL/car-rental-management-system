@@ -259,8 +259,8 @@ The vehicle has been withdrawn from operational use and cannot be assigned to ne
 
 A vehicle has an operational status:
 
-- Active,
-- Withdrawn.
+* Active,
+* Withdrawn.
 
 ### Active
 
@@ -276,10 +276,10 @@ Vehicle availability is calculated for a specific date and time range.
 
 A vehicle is unavailable during a requested period if:
 
-- the vehicle is withdrawn,
-- an open blocking vehicle case overlaps the requested period,
-- the vehicle is assigned to another confirmed reservation that overlaps the requested period,
-- the vehicle is part of an active rental that overlaps the requested period.
+* the vehicle is withdrawn,
+* an open blocking vehicle case overlaps the requested period,
+* the vehicle is assigned to another confirmed reservation that overlaps the requested period,
+* the vehicle is part of an active rental that overlaps the requested period.
 
 A vehicle can be reserved during one period and available during another period.
 
@@ -293,12 +293,12 @@ Each change of the vehicle's branch creates a VehicleBranchHistory record.
 
 A vehicle branch history record stores:
 
-- vehicle,
-- previous branch,
-- new branch,
-- employee who performed the change,
-- change timestamp,
-- optional reason.
+* vehicle,
+* previous branch,
+* new branch,
+* employee who performed the change,
+* change timestamp,
+* optional reason.
 
 The branch history cannot be deleted or modified through ordinary application operations.
 
@@ -310,20 +310,20 @@ Each mileage change creates a VehicleMileageHistory record.
 
 A vehicle mileage history record stores:
 
-- vehicle,
-- mileage value,
-- recorded timestamp,
-- user who recorded the mileage,
-- mileage source,
-- optional reason.
+* vehicle,
+* mileage value,
+* recorded timestamp,
+* user who recorded the mileage,
+* mileage source,
+* optional reason.
 
 Mileage source is required and can include:
 
-- VehicleRegistration,
-- RentalHandover,
-- RentalReturn,
-- VehicleCase,
-- AdministratorCorrection.
+* VehicleRegistration,
+* RentalHandover,
+* RentalReturn,
+* VehicleCase,
+* AdministratorCorrection.
 
 Historical mileage records cannot be deleted or modified through ordinary application operations.
 
@@ -335,13 +335,13 @@ Customer represents a rental company customer and stores business data rather th
 
 A customer stores:
 
-- first name,
-- last name,
-- email address,
-- phone number,
-- date of birth,
-- status,
-- creation timestamp.
+* first name,
+* last name,
+* email address,
+* phone number,
+* date of birth,
+* status,
+* creation timestamp.
 
 A customer can be identified using different types of identity documents.
 
@@ -351,20 +351,20 @@ Customer identity documents are stored in a separate CustomerIdentityDocument en
 
 An identity document stores:
 
-- customer,
-- document type,
-- document number,
-- issuing country,
-- optional expiry date,
-- primary document flag,
-- verification timestamp,
-- employee who verified the document.
+* customer,
+* document type,
+* document number,
+* issuing country,
+* optional expiry date,
+* primary document flag,
+* verification timestamp,
+* employee who verified the document.
 
 Supported document types can include:
 
-- NationalId,
-- Passport,
-- ForeignIdentityCard.
+* NationalId,
+* Passport,
+* ForeignIdentityCard.
 
 A customer does not need to have a national identification number if another accepted identity document is available.
 
@@ -380,12 +380,12 @@ Customer driving license data is stored separately from identity documents.
 
 A driving license record stores:
 
-- customer,
-- license number,
-- issuing country,
-- expiry date,
-- verification timestamp,
-- employee who verified the document.
+* customer,
+* license number,
+* issuing country,
+* expiry date,
+* verification timestamp,
+* employee who verified the document.
 
 A valid and verified driving license is required before vehicle handover.
 
@@ -399,10 +399,10 @@ A customer can exist without a driving license, but a valid and verified driving
 
 A customer can have one of the following statuses:
 
-- Active,
-- Blocked,
-- Blacklisted,
-- Anonymized.
+* Active,
+* Blocked,
+* Blacklisted,
+* Anonymized.
 
 ### Active
 
@@ -426,19 +426,19 @@ Reservation represents a planned rental before vehicle handover.
 
 A reservation stores:
 
-- customer,
-- reserved vehicle category,
-- optional assigned vehicle,
-- pickup branch,
-- return branch,
-- planned pickup date and time,
-- planned return date and time,
-- reservation status,
-- creation timestamp,
-- optional confirmation timestamp,
-- optional cancellation timestamp,
-- optional cancellation reason,
-- total reservation price.
+* customer,
+* reserved vehicle category,
+* optional assigned vehicle,
+* pickup branch,
+* return branch,
+* planned pickup date and time,
+* planned return date and time,
+* reservation status,
+* creation timestamp,
+* optional confirmation timestamp,
+* optional cancellation timestamp,
+* optional cancellation reason,
+* total reservation price.
 
 AssignedVehicleId is optional because an employee can confirm a reservation before assigning a specific vehicle.
 
@@ -452,23 +452,23 @@ Price components are stored in a separate ReservationPriceItem entity.
 
 A reservation price item stores:
 
-- reservation,
-- price item type,
-- description,
-- quantity,
-- unit price,
-- total amount,
-- refundable flag.
+* reservation,
+* price item type,
+* description,
+* quantity,
+* unit price,
+* total amount,
+* refundable flag.
 
 Price item types can include:
 
-- RentalBasePrice,
-- Insurance,
-- AdditionalDriver,
-- ChildSeat,
-- TravelAbroadPermission,
-- OutOfHoursPickupFee,
-- OutOfHoursReturnFee.
+* RentalBasePrice,
+* Insurance,
+* AdditionalDriver,
+* ChildSeat,
+* TravelAbroadPermission,
+* OutOfHoursPickupFee,
+* OutOfHoursReturnFee.
 
 Reservation price items represent pricing snapshots and are not changed by later pricing configuration updates.
 
@@ -478,13 +478,13 @@ Additional drivers are stored as separate records associated with a reservation.
 
 A ReservationAdditionalDriver record stores:
 
-- reservation,
-- first name,
-- last name,
-- phone number,
-- driving license number,
-- driving license issuing country,
-- driving license expiry date.
+* reservation,
+* first name,
+* last name,
+* phone number,
+* driving license number,
+* driving license issuing country,
+* driving license expiry date.
 
 Each additional driver must have a valid driving license before vehicle handover.
 
@@ -500,19 +500,19 @@ Rental represents an active or completed vehicle rental created from a reservati
 
 A rental stores:
 
-- reservation,
-- vehicle,
-- customer,
-- pickup branch,
-- planned return branch,
-- optional actual return branch,
-- rental start date and time,
-- planned return date and time,
-- optional actual return date and time,
-- rental status,
-- deposit amount,
-- returned deposit amount,
-- final total amount.
+* reservation,
+* vehicle,
+* customer,
+* pickup branch,
+* planned return branch,
+* optional actual return branch,
+* rental start date and time,
+* planned return date and time,
+* optional actual return date and time,
+* rental status,
+* deposit amount,
+* returned deposit amount,
+* final total amount.
 
 A reservation can create zero or one rental.
 
@@ -522,11 +522,11 @@ A reservation creates exactly one rental when the vehicle is handed over to the 
 
 Rental stores the terms applicable to the specific rental, including:
 
-- selected insurance package,
-- insurance deductible,
-- mileage limit,
-- exceeded mileage price,
-- travel abroad permission terms.
+* selected insurance package,
+* insurance deductible,
+* mileage limit,
+* exceeded mileage price,
+* travel abroad permission terms.
 
 ## Vehicle Handover and Return Records
 
@@ -538,12 +538,12 @@ VehicleHandover stores the vehicle condition when the vehicle is handed over to 
 
 A handover record stores:
 
-- rental,
-- mileage,
-- fuel level,
-- handover date and time,
-- employee who performed the handover,
-- customer confirmation timestamp.
+* rental,
+* mileage,
+* fuel level,
+* handover date and time,
+* employee who performed the handover,
+* customer confirmation timestamp.
 
 ## VehicleReturn
 
@@ -551,11 +551,11 @@ VehicleReturn stores the vehicle condition when the vehicle is returned.
 
 A return record stores:
 
-- rental,
-- mileage,
-- fuel level,
-- return date and time,
-- employee who received the vehicle.
+* rental,
+* mileage,
+* fuel level,
+* return date and time,
+* employee who received the vehicle.
 
 Damage and equipment records are stored separately and associated with the handover or return record.
 
@@ -565,12 +565,11 @@ Vehicle damages recorded during handover and return are stored as separate struc
 
 A damage record stores:
 
-- associated handover or return record,
-- damage description,
-- vehicle location,
-- severity,
-- recording timestamp,
-- employee who recorded the damage.
+* associated handover or return record,
+* detailed damage description,
+* severity,
+* recording timestamp,
+* employee who recorded the damage.
 
 The system compares damage records from vehicle handover and return to identify newly reported damage.
 
@@ -580,9 +579,10 @@ Vehicle equipment checks recorded during handover and return are stored as separ
 
 An equipment record stores:
 
-- associated handover or return record,
-- equipment item type,
-- presence status,
-- optional comment.
+* associated handover or return record,
+* equipment item type,
+* presence status,
+* optional comment.
 
 The system compares equipment records from vehicle handover and return to identify missing equipment.
+
