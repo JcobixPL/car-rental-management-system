@@ -192,3 +192,13 @@ After the vehicle is handed over to the customer, the reservation becomes an act
 An active rental cannot be cancelled.
 
 The rental must be completed through the vehicle return process.
+
+## Rental Extension Request
+
+A customer can request an extension of an active rental.
+
+The extension is not applied automatically and requires employee approval.
+
+An employee reviews the request based on vehicle availability, future reservations and operational needs.
+
+If the extension request is rejected, the employee must select a rejection reason and provide a justification.
