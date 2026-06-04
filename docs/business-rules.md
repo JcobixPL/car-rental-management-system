@@ -293,3 +293,9 @@ A payment attempt record includes:
 Failed payment attempts cannot be deleted or changed.
 
 Payment attempt history is separate from the technical application logs and the audit log.
+
+## Payment Retry
+
+A customer can retry a failed payment and may choose a different supported payment method.
+
+Each payment attempt is recorded as a separate history entry.
