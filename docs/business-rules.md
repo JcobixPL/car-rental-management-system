@@ -343,3 +343,11 @@ Adding a customer to the blacklist requires a selected reason and an additional 
 The system records the user who performed the action, timestamp and reason in the audit log.
 
 A blacklisted customer cannot create new reservations.
+
+## Customer Blacklist Removal
+
+An employee or administrator can remove a customer from the blacklist.
+
+Removing a customer from the blacklist requires a reason and an additional comment.
+
+The system records the user who performed the action, timestamp and reason in the audit log.
