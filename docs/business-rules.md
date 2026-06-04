@@ -299,3 +299,13 @@ Payment attempt history is separate from the technical application logs and the 
 A customer can retry a failed payment and may choose a different supported payment method.
 
 Each payment attempt is recorded as a separate history entry.
+
+## Customer Self-Service Data Changes
+
+A customer can update their own contact data, including email address and phone number.
+
+Changes to customer contact data must be recorded in the audit history.
+
+The system records the changed field, previous value, new value and timestamp.
+
+A new email address or phone number must be verified before it becomes the active contact value.
