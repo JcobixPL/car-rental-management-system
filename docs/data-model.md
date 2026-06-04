@@ -186,3 +186,15 @@ Insurance deductible amounts are stored separately for each supported vehicle ca
 When a customer selects an insurance package, the applicable price, deposit reduction and deductible are stored as part of the reservation or rental terms.
 
 Later changes to insurance pricing or configuration do not affect existing reservations or rentals.
+
+## Insurance Daily Pricing
+
+Insurance packages are priced per rental day.
+
+InsurancePackageVersion stores a daily insurance price rather than a one-time price.
+
+When a customer selects an insurance package, the applicable daily price is stored as a snapshot in the reservation terms.
+
+The customer pays in advance for the insurance covering the planned rental period.
+
+If the rental is extended, additional insurance days are calculated using the stored daily insurance price and are charged after vehicle return.

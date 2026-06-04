@@ -393,3 +393,13 @@ The applicable fee is stored as part of the reservation price snapshot.
 Out-of-hours pickup and return do not require employee approval.
 
 The service is always available when the applicable fee is added to the reservation.
+
+## Insurance Payment
+
+Insurance is charged for each rental day.
+
+The customer pays for insurance in advance for the planned rental period.
+
+If the rental is extended, the insurance remains active and the customer pays for the additional insurance days after vehicle return.
+
+The daily insurance price used for additional days is the price stored when the insurance package was selected.
