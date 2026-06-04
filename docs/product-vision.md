@@ -6,9 +6,9 @@ Car Rental Management System (CRMS)
 
 ## User Roles
 
-- Administrator
-- Employee
-- Customer
+* Administrator
+* Employee
+* Customer
 
 ## Business Context
 
@@ -42,11 +42,13 @@ After a customer creates a reservation, it is added to the list of pending reser
 
 An employee reviews the reservation before the planned pickup date.
 
-To approve the reservation, the employee assigns a specific available vehicle from the reserved category or from a higher category without increasing the customer's price.
+An employee can approve the reservation based on the expected availability of the reserved vehicle category.
 
-If no suitable vehicle is available, the employee may cancel the reservation and must provide a cancellation reason.
+A specific vehicle does not need to be assigned at the moment the reservation is approved.
 
-## Vehicle Assignment Changes
+A specific available vehicle from the reserved category or from a higher category without increasing the customer's price must be assigned before vehicle pickup.
+
+If no suitable vehicle is available before pickup, the employee may cancel the reservation and must provide a cancellation reason.Vehicle Assignment Changes
 
 An employee may change the vehicle assigned to an approved reservation before the vehicle is handed over to the customer.
 
@@ -65,3 +67,4 @@ If an employee assigns a vehicle from a higher category, the customer is not cha
 The employee may decide to assign a higher-category vehicle without increasing the price or cancel the reservation if no suitable vehicle is available.
 
 Reservation cancellation requires a selected cancellation reason and may include an additional comment.
+
