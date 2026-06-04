@@ -369,3 +369,13 @@ Automatically cancelled reservations must include a cancellation reason indicati
 If a cancelled reservation was paid in advance, the customer receives a full refund.
 
 The system records the automatic cancellations in the audit log.
+
+## Blacklisting During Active Rental
+
+A customer can be added to the blacklist during an active rental.
+
+Blacklisting does not cancel or terminate the active rental.
+
+The customer must return the vehicle according to the rental agreement.
+
+The system blocks new reservations, cancels future reservations and displays a warning to employees handling the active rental and vehicle return.
