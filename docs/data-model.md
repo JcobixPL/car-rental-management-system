@@ -206,3 +206,29 @@ The system should distinguish between planned insurance days, used insurance day
 Rental refunds for early vehicle return are calculated using the stored reservation pricing snapshot.
 
 The system should distinguish between the planned rental period, actual rental period, original rental price and recalculated actual rental price.
+## Vehicle
+
+Vehicle represents a specific physical car.
+
+A vehicle stores:
+
+- VIN,
+- registration number,
+- make,
+- model,
+- production year,
+- vehicle category,
+- current branch,
+- current mileage,
+- fuel type,
+- transmission type,
+- status,
+- next technical inspection date,
+- next service mileage,
+- next service date.
+
+Transmission type is stored directly in Vehicle even though the vehicle category may also imply a transmission type.
+
+The system should validate that the vehicle transmission type is compatible with the assigned vehicle category.
+
+The number of kilometers remaining until the next service is calculated from the current mileage and next service mileage rather than stored directly.
