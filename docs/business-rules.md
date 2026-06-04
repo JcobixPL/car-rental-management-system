@@ -244,3 +244,13 @@ During the grace period, the customer cannot create new reservations, but existi
 If the outstanding balance is fully paid before the deadline, the customer's future reservations remain unchanged.
 
 If the outstanding balance is not paid before the deadline, the system automatically cancels the customer's future reservations.
+
+## Outstanding Balance Before Vehicle Pickup
+
+A customer with an unpaid outstanding balance cannot pick up a vehicle.
+
+If a future reservation starts before the outstanding balance payment deadline, the customer must pay the outstanding balance before the planned pickup time.
+
+If the outstanding balance is not paid before the planned pickup time, that reservation is automatically cancelled.
+
+Other future reservations remain active until the outstanding balance payment deadline expires.
