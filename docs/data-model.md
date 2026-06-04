@@ -489,3 +489,7 @@ A ReservationAdditionalDriver record stores:
 Each additional driver must have a valid driving license before vehicle handover.
 
 The number of additional drivers is derived from the associated records rather than stored as a separate value.
+
+An additional driver is stored only within the context of a specific reservation.
+
+An additional driver does not need to exist as a Customer in the system.
