@@ -85,3 +85,9 @@ An open case can contain planned work and completed work orders.
 A closed case represents a completed case.
 
 A cancelled case represents a case that will not be completed.
+
+## Availability Recalculation
+
+When a blocking vehicle case is closed or cancelled, the system recalculates the vehicle's availability.
+
+If no other open blocking case affects the vehicle during the same date range, the vehicle becomes available again.
