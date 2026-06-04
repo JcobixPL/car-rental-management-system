@@ -35,3 +35,13 @@ A specific vehicle is assigned to the reservation by an employee before pickup.
 If no vehicle from the reserved category is available, an employee may assign a vehicle from a higher category without increasing the customer's price.
 
 Reservation cancellation due to vehicle unavailability should be treated as an exceptional situation.
+
+## Reservation Approval Process
+
+After a customer creates a reservation, it is added to the list of pending reservations.
+
+An employee reviews the reservation before the planned pickup date.
+
+To approve the reservation, the employee assigns a specific available vehicle from the reserved category or from a higher category without increasing the customer's price.
+
+If no suitable vehicle is available, the employee may cancel the reservation and must provide a cancellation reason.
