@@ -309,3 +309,15 @@ Changes to customer contact data must be recorded in the audit history.
 The system records the changed field, previous value, new value and timestamp.
 
 A new email address or phone number must be verified before it becomes the active contact value.
+
+## Customer Identification Data Changes
+
+A customer cannot independently change sensitive identification data, including:
+
+- national identification number,
+- passport number,
+- driving license number.
+
+Sensitive identification data can only be updated by an employee after verifying the relevant document.
+
+The system records the employee, timestamp, changed field and verification reason in the audit log.
