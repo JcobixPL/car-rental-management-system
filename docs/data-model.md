@@ -202,3 +202,7 @@ If the rental is extended, additional insurance days are calculated using the st
 Insurance refunds for early vehicle return are calculated using the stored daily insurance price snapshot.
 
 The system should distinguish between planned insurance days, used insurance days and refundable unused insurance days.
+
+Rental refunds for early vehicle return are calculated using the stored reservation pricing snapshot.
+
+The system should distinguish between the planned rental period, actual rental period, original rental price and recalculated actual rental price.

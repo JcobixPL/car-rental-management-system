@@ -411,3 +411,18 @@ If a customer returns the vehicle earlier than planned, the customer receives a 
 The refund is calculated using the daily insurance price stored when the insurance package was selected.
 
 Only full unused rental days are eligible for a refund.
+
+## Rental Refund for Early Return
+
+If a customer returns the vehicle earlier than planned, the customer receives a refund for unused rental days.
+
+The refund is calculated as the difference between:
+
+- the rental price paid for the planned rental period,
+- the rental price applicable to the actual rental period.
+
+The actual rental price is recalculated using the pricing snapshot stored when the reservation was created.
+
+Later pricing changes do not affect the refund calculation.
+
+Only full unused rental days are eligible for a refund.
