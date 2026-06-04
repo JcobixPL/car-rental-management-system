@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarRentalManagementSystem.Api.Controllers
 {
     [ApiController]
-    [Route("api/branches")]
+    [Route("api/[controller]")]
     public class BranchesController : ControllerBase
     {
         private readonly CreateBranchService _createBranchService;

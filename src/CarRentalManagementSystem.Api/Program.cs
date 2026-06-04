@@ -1,3 +1,4 @@
+using CarRentalManagementSystem.Api.Middleware;
 using CarRentalManagementSystem.Application;
 using CarRentalManagementSystem.Infrastructure;
 using CarRentalManagementSystem.Infrastructure.Data;
@@ -15,6 +16,8 @@ builder.Services.AddApplication();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
