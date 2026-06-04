@@ -266,3 +266,13 @@ The reservation block is removed only when:
 - an administrator corrects the outstanding balance to zero with a required justification.
 
 All outstanding balance corrections and cancellations must be recorded in the audit log.
+
+## Branch Card Payment Processing
+
+Card payments at a rental branch are processed through a simulated payment terminal.
+
+An employee can initiate a payment, but cannot manually mark the payment as completed.
+
+The simulated terminal returns a payment result, such as approved or declined.
+
+The system records the payment result, timestamp and employee who initiated the transaction.
