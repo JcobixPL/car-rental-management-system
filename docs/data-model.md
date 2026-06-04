@@ -665,3 +665,60 @@ A comment stores:
 - content,
 - creation timestamp,
 - employee who created the comment.
+
+## Payment
+
+Payment represents a single payment attempt.
+
+A payment stores:
+
+- customer,
+- optional reservation,
+- optional outstanding balance,
+- payment method,
+- payment status,
+- amount,
+- creation timestamp,
+- optional completion timestamp,
+- optional failure reason,
+- optional employee who initiated the payment.
+
+A payment is associated with exactly one payment purpose:
+
+- one reservation,
+- or one outstanding balance.
+
+A single payment cannot cover multiple reservations or multiple outstanding balances.
+
+Each payment attempt creates a separate immutable Payment record, including failed attempts.
+
+Payment status is stored as an enum with values:
+
+- Pending,
+- Completed,
+- Failed,
+- Cancelled,
+- Refunded.
+
+## OutstandingBalance
+
+OutstandingBalance represents an amount that a customer must pay after it becomes due.
+
+An outstanding balance stores:
+
+- customer,
+- optional reservation,
+- optional rental,
+- reason,
+- original amount,
+- remaining amount,
+- due date and time,
+- status,
+- creation timestamp,
+- optional payment timestamp.
+
+Outstanding balance status is stored as an enum with values:
+
+- Open,
+- Paid,
+- Cancelled.
