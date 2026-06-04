@@ -55,3 +55,13 @@ The assigned vehicle cannot belong to a category lower than the category reserve
 If a higher-category vehicle was assigned because the reserved category was unavailable, the employee may later replace it with a vehicle from the originally reserved category.
 
 The system should record the history of vehicle assignment changes, including the employee, previous vehicle, new vehicle, timestamp and reason.
+
+## Reservation Pricing and Vehicle Upgrade
+
+The customer pays the price of the vehicle category selected during the reservation.
+
+If an employee assigns a vehicle from a higher category, the customer is not charged an additional fee.
+
+The employee may decide to assign a higher-category vehicle without increasing the price or cancel the reservation if no suitable vehicle is available.
+
+Reservation cancellation requires a selected cancellation reason and may include an additional comment.
