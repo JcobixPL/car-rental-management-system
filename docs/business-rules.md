@@ -202,3 +202,13 @@ The extension is not applied automatically and requires employee approval.
 An employee reviews the request based on vehicle availability, future reservations and operational needs.
 
 If the extension request is rejected, the employee must select a rejection reason and provide a justification.
+
+## Short-Term Rental Duration
+
+The maximum duration of a single short-term rental is configured by an administrator.
+
+The default maximum rental duration is 60 days.
+
+An approved rental extension uses the pricing rules from the original reservation.
+
+If the customer wants to rent the vehicle beyond the maximum rental duration, the current rental must be completed and a new reservation must be created using the current pricing configuration.
