@@ -45,3 +45,13 @@ An employee reviews the reservation before the planned pickup date.
 To approve the reservation, the employee assigns a specific available vehicle from the reserved category or from a higher category without increasing the customer's price.
 
 If no suitable vehicle is available, the employee may cancel the reservation and must provide a cancellation reason.
+
+## Vehicle Assignment Changes
+
+An employee may change the vehicle assigned to an approved reservation before the vehicle is handed over to the customer.
+
+The assigned vehicle cannot belong to a category lower than the category reserved by the customer.
+
+If a higher-category vehicle was assigned because the reserved category was unavailable, the employee may later replace it with a vehicle from the originally reserved category.
+
+The system should record the history of vehicle assignment changes, including the employee, previous vehicle, new vehicle, timestamp and reason.
