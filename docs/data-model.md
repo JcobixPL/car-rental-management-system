@@ -111,3 +111,25 @@ Vehicle categories do not use an upgrade hierarchy.
 An employee can assign any available vehicle from any category to a reservation.
 
 The customer always pays the price of the originally reserved category, regardless of the category of the assigned vehicle.
+
+## Vehicle Category Pricing
+
+Vehicle rental prices are not stored directly in VehicleCategory.
+
+Pricing is stored in a separate VehicleCategoryPrice entity.
+
+A vehicle category can have multiple pricing records over time.
+
+A pricing record stores:
+
+- vehicle category,
+- daily price,
+- minimum daily price,
+- daily discount percentage,
+- validity start date,
+- optional validity end date,
+- active status.
+
+When a reservation is created, the system uses the currently applicable pricing record.
+
+The calculated reservation price is stored as a price snapshot and is not changed by later pricing updates.
