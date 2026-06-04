@@ -126,3 +126,11 @@ The insurance deductible applies to the entire rental rather than separately to 
 For damages covered by the selected insurance package, the customer's total liability during a single rental cannot exceed the stored deductible amount.
 
 Damages excluded from insurance coverage are not limited by the deductible and may result in full customer liability.
+
+## Deposit Return
+
+If no issues are recorded during vehicle return, the deposit is returned immediately.
+
+If issues are recorded during vehicle return, the deposit remains on hold until all related post-rental review tasks are completed.
+
+After the review process is completed, approved charges are deducted from the deposit and any remaining amount is returned to the customer.
