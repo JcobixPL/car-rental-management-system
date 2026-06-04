@@ -113,3 +113,9 @@ The system supports the following payment methods:
 - card payment at a rental branch.
 
 Cash payments are not supported.
+
+## Payment Gateway
+
+Online payments are simulated within the application.
+
+The payment implementation should be designed so that a real external payment gateway can be integrated in the future without changing the core business logic.
