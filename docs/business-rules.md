@@ -218,3 +218,17 @@ If the customer wants to rent the vehicle beyond the maximum rental duration, th
 The maximum time in advance that a customer can create a reservation is configured by an administrator.
 
 The default booking window is 3 months.
+
+## Customer Outstanding Balance and Future Reservations
+
+A customer can have multiple future reservations.
+
+If a customer receives an outstanding balance for a late cancellation and does not pay it, the system blocks the customer from creating new reservations.
+
+The system also cancels the customer's future reservations.
+
+Automatically cancelled reservations must include a cancellation reason indicating that the customer has an unpaid outstanding balance.
+
+If a future reservation was paid in advance, the customer receives a refund according to the applicable refund rules.
+
+The system records the automatic cancellation in the audit log.
