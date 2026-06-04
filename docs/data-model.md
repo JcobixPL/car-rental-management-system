@@ -394,3 +394,28 @@ A customer can have zero or one current driving license record.
 When a driving license is replaced or renewed, the current record is updated through a controlled employee verification process.
 
 A customer can exist without a driving license, but a valid and verified driving license is required before vehicle handover.
+
+## Customer Statuses
+
+A customer can have one of the following statuses:
+
+- Active,
+- Blocked,
+- Blacklisted,
+- Anonymized.
+
+### Active
+
+The customer can use the system normally and create reservations.
+
+### Blocked
+
+The customer is temporarily blocked, for example because of an unpaid outstanding balance.
+
+### Blacklisted
+
+The customer has been blacklisted by an employee or administrator and cannot create new reservations.
+
+### Anonymized
+
+The customer's personal data has been anonymized while historical business records remain available.
