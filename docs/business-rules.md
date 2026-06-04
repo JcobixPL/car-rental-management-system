@@ -254,3 +254,15 @@ If a future reservation starts before the outstanding balance payment deadline, 
 If the outstanding balance is not paid before the planned pickup time, that reservation is automatically cancelled.
 
 Other future reservations remain active until the outstanding balance payment deadline expires.
+
+## Outstanding Balance Resolution
+
+A customer cannot be manually unblocked while an unpaid outstanding balance exists.
+
+The reservation block is removed only when:
+
+- the outstanding balance is fully paid,
+- the outstanding balance is cancelled because it was created incorrectly,
+- an administrator corrects the outstanding balance to zero with a required justification.
+
+All outstanding balance corrections and cancellations must be recorded in the audit log.
