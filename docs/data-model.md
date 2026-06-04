@@ -586,3 +586,32 @@ An equipment record stores:
 
 The system compares equipment records from vehicle handover and return to identify missing equipment.
 
+
+## VehicleCase
+
+VehicleCase represents an issue, maintenance activity, inspection or administrative matter related to a vehicle.
+
+A vehicle case stores:
+
+- vehicle,
+- category,
+- title,
+- description,
+- status,
+- planned start date and time,
+- planned end date and time,
+- availability blocking flag,
+- creation timestamp,
+- employee who created the case,
+- optional closing timestamp,
+- optional cancellation timestamp.
+
+Vehicle case category is stored as an enum with values:
+
+- Mechanical,
+- Damage,
+- TechnicalInspection,
+- PeriodicMaintenance,
+- Administrative.
+
+A vehicle case can have multiple work orders, costs, invoices and comments.
