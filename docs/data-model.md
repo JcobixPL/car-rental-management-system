@@ -373,3 +373,18 @@ A customer can have multiple identity documents.
 At least one verified identity document is required before vehicle handover.
 
 One identity document can be marked as the primary document.
+
+## Customer Driving License
+
+Customer driving license data is stored separately from identity documents.
+
+A driving license record stores:
+
+- customer,
+- license number,
+- issuing country,
+- expiry date,
+- verification timestamp,
+- employee who verified the document.
+
+A valid and verified driving license is required before vehicle handover.
