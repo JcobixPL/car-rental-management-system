@@ -367,3 +367,9 @@ Supported document types can include:
 - ForeignIdentityCard.
 
 A customer does not need to have a national identification number if another accepted identity document is available.
+
+A customer can have multiple identity documents.
+
+At least one verified identity document is required before vehicle handover.
+
+One identity document can be marked as the primary document.
