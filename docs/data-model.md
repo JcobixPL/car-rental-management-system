@@ -443,3 +443,31 @@ A reservation stores:
 AssignedVehicleId is optional because an employee can confirm a reservation before assigning a specific vehicle.
 
 Reservation pickup and return periods are stored using exact dates and times rather than only calendar dates.
+
+## Reservation Price Items
+
+Reservation stores a total price and a detailed breakdown of price components.
+
+Price components are stored in a separate ReservationPriceItem entity.
+
+A reservation price item stores:
+
+- reservation,
+- price item type,
+- description,
+- quantity,
+- unit price,
+- total amount,
+- refundable flag.
+
+Price item types can include:
+
+- RentalBasePrice,
+- Insurance,
+- AdditionalDriver,
+- ChildSeat,
+- TravelAbroadPermission,
+- OutOfHoursPickupFee,
+- OutOfHoursReturnFee.
+
+Reservation price items represent pricing snapshots and are not changed by later pricing configuration updates.
