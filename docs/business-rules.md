@@ -321,3 +321,15 @@ A customer cannot independently change sensitive identification data, including:
 Sensitive identification data can only be updated by an employee after verifying the relevant document.
 
 The system records the employee, timestamp, changed field and verification reason in the audit log.
+
+## Customer Profile Retention
+
+Customer profiles are not deleted through ordinary application operations.
+
+A customer profile can be active, blocked or blacklisted.
+
+Customer rental history must remain available for operational, accounting and legal purposes for the configured retention period.
+
+After the retention period expires and there is no legal or business reason to keep the personal data, the customer profile should be anonymized.
+
+Anonymization must preserve historical rental records while removing or replacing personal identification data.
