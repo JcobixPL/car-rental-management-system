@@ -479,3 +479,5 @@ The default preparation buffer is 1 hour.
 The preparation buffer can be configured by an administrator.
 
 A vehicle is not considered available for a new reservation until the preparation buffer has elapsed.
+
+The vehicle preparation buffer is mandatory and cannot be shortened or bypassed by an employee.
