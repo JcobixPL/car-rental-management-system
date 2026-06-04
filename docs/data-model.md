@@ -74,3 +74,17 @@ Branch opening hours are configured independently for each branch.
 Each day of the week can have its own opening and closing time.
 
 A branch can be marked as closed on a selected day.
+
+## Branch Opening Hours Exceptions
+
+Each branch can define exceptions to its standard opening hours for specific calendar dates.
+
+An exception can:
+
+- mark the branch as closed,
+- define shortened opening hours,
+- define extended opening hours.
+
+Branch opening hours exceptions are configured independently for each branch.
+
+When validating pickup and return times, a date-specific exception takes priority over the standard weekly opening hours.
