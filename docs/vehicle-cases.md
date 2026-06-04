@@ -71,3 +71,17 @@ A vehicle can have multiple active cases at the same time.
 If at least one active case blocks the vehicle during a given date range, the vehicle is unavailable during that period.
 
 Non-blocking cases do not make the vehicle unavailable.
+
+## Case Statuses
+
+A vehicle case can have one of the following statuses:
+
+- Open,
+- Closed,
+- Cancelled.
+
+An open case can contain planned work and completed work orders.
+
+A closed case represents a completed case.
+
+A cancelled case represents a case that will not be completed.
