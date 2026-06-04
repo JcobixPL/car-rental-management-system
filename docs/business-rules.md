@@ -403,3 +403,11 @@ The customer pays for insurance in advance for the planned rental period.
 If the rental is extended, the insurance remains active and the customer pays for the additional insurance days after vehicle return.
 
 The daily insurance price used for additional days is the price stored when the insurance package was selected.
+
+## Insurance Refund for Early Return
+
+If a customer returns the vehicle earlier than planned, the customer receives a refund for unused insurance days.
+
+The refund is calculated using the daily insurance price stored when the insurance package was selected.
+
+Only full unused rental days are eligible for a refund.

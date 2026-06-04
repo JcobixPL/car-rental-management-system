@@ -198,3 +198,7 @@ When a customer selects an insurance package, the applicable daily price is stor
 The customer pays in advance for the insurance covering the planned rental period.
 
 If the rental is extended, additional insurance days are calculated using the stored daily insurance price and are charged after vehicle return.
+
+Insurance refunds for early vehicle return are calculated using the stored daily insurance price snapshot.
+
+The system should distinguish between planned insurance days, used insurance days and refundable unused insurance days.
