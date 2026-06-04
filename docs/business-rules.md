@@ -232,3 +232,15 @@ Automatically cancelled reservations must include a cancellation reason indicati
 If a future reservation was paid in advance, the customer receives a refund according to the applicable refund rules.
 
 The system records the automatic cancellation in the audit log.
+
+## Outstanding Balance Payment Grace Period
+
+When an outstanding balance is created, the customer has a limited time to pay it.
+
+The default payment grace period is 48 hours and can be configured by an administrator.
+
+During the grace period, the customer cannot create new reservations, but existing future reservations remain active.
+
+If the outstanding balance is fully paid before the deadline, the customer's future reservations remain unchanged.
+
+If the outstanding balance is not paid before the deadline, the system automatically cancels the customer's future reservations.
