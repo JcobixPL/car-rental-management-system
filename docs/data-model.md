@@ -232,3 +232,33 @@ Transmission type is stored directly in Vehicle even though the vehicle category
 The system should validate that the vehicle transmission type is compatible with the assigned vehicle category.
 
 The number of kilometers remaining until the next service is calculated from the current mileage and next service mileage rather than stored directly.
+
+## Vehicle Statuses
+
+A vehicle can have one of the following statuses:
+
+- Available,
+- Reserved,
+- Rented,
+- Unavailable,
+- Withdrawn.
+
+### Available
+
+The vehicle can be assigned to a reservation.
+
+### Reserved
+
+The vehicle is assigned to a confirmed reservation.
+
+### Rented
+
+The vehicle has been handed over to a customer and is part of an active rental.
+
+### Unavailable
+
+The vehicle is temporarily unavailable, for example because of a blocking vehicle case.
+
+### Withdrawn
+
+The vehicle has been withdrawn from operational use and cannot be assigned to new reservations.
