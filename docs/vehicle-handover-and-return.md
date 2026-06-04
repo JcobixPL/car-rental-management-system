@@ -25,3 +25,26 @@ Vehicle condition photos are not included in the MVP.
 The MVP uses structured damage and equipment records instead.
 
 Photo documentation may be added in a future version.
+
+## Vehicle Equipment Checklist
+
+Each vehicle has an equipment checklist used during vehicle handover and return.
+
+The default equipment checklist includes:
+
+- vehicle registration document,
+- liability insurance policy,
+- fire extinguisher,
+- warning triangle,
+- first aid kit,
+- tire repair kit or spare wheel,
+- tool kit,
+- vehicle documentation.
+
+Each equipment item can be marked as present or missing.
+
+An equipment item can be configured as required for vehicle handover.
+
+By default, the fire extinguisher and warning triangle are required for handover.
+
+A missing non-required equipment item does not block vehicle handover, but the missing item must be recorded.
