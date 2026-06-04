@@ -60,3 +60,23 @@ The employee reviews the missing item and decides whether to:
 - create a vehicle case.
 
 The decision, reason and employee must be recorded.
+
+## Post-Rental Charges
+
+After vehicle return, the system calculates proposed charges for:
+
+- missing fuel,
+- exceeded mileage limits,
+- missing equipment,
+- reported damages,
+- other rental-related issues.
+
+Proposed charges are not applied automatically.
+
+An employee must review each proposed charge and can:
+
+- approve the proposed amount,
+- change the amount with a required justification,
+- waive the charge with a required justification.
+
+The system records the employee, original proposed amount, final amount, decision, reason and timestamp.
