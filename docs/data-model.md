@@ -615,3 +615,53 @@ Vehicle case category is stored as an enum with values:
 - Administrative.
 
 A vehicle case can have multiple work orders, costs, invoices and comments.
+
+## Vehicle Case Work Orders
+
+VehicleCaseWorkOrder represents work completed as part of a vehicle case.
+
+A work order stores:
+
+- vehicle case,
+- title,
+- description,
+- completion timestamp,
+- employee or external service provider,
+- cost.
+
+## Vehicle Case Costs
+
+VehicleCaseCost represents an additional cost related to a vehicle case.
+
+A cost record stores:
+
+- vehicle case,
+- description,
+- amount,
+- creation timestamp,
+- employee who created the record.
+
+## Vehicle Case Invoices
+
+VehicleCaseInvoice represents a manually entered invoice associated with a vehicle case.
+
+An invoice record stores:
+
+- vehicle case,
+- invoice number,
+- issuer,
+- issue date,
+- amount,
+- description,
+- optional attachment reference.
+
+## Vehicle Case Comments
+
+VehicleCaseComment represents a note added during the lifecycle of a vehicle case.
+
+A comment stores:
+
+- vehicle case,
+- content,
+- creation timestamp,
+- employee who created the comment.
