@@ -108,3 +108,13 @@ The deposit amount and the insurance deductible are separate values.
 If a damage is excluded from insurance coverage, the customer may be responsible for the full approved damage cost.
 
 All damage charges must be reviewed and approved by an employee before they are applied.
+
+## Insurance Deductible Configuration
+
+The insurance deductible depends on both the vehicle category and the insurance package selected for the rental.
+
+An administrator configures the deductible amount for each supported vehicle category and insurance package combination.
+
+The applicable deductible amount is stored as part of the rental terms when the insurance package is selected.
+
+Later changes to the deductible configuration do not affect existing reservations or rentals.
