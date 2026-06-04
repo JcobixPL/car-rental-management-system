@@ -161,3 +161,28 @@ A deposit record stores:
 - active status.
 
 The applicable deposit amount is stored as part of the reservation or rental terms so that later configuration changes do not affect existing reservations or rentals.
+
+## Insurance Package History
+
+Insurance packages are stored separately from their historical pricing and configuration.
+
+InsurancePackage stores the permanent identity of a package, including its code, name, description and active status.
+
+InsurancePackageVersion stores the configuration valid during a specific period.
+
+A package version stores:
+
+- insurance package,
+- price,
+- deposit reduction percentage,
+- validity start date,
+- optional validity end date,
+- active status.
+
+The insurance deductible depends on both the insurance package version and the vehicle category.
+
+Insurance deductible amounts are stored separately for each supported vehicle category and insurance package version combination.
+
+When a customer selects an insurance package, the applicable price, deposit reduction and deductible are stored as part of the reservation or rental terms.
+
+Later changes to insurance pricing or configuration do not affect existing reservations or rentals.
