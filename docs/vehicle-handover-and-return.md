@@ -118,3 +118,11 @@ An administrator configures the deductible amount for each supported vehicle cat
 The applicable deductible amount is stored as part of the rental terms when the insurance package is selected.
 
 Later changes to the deductible configuration do not affect existing reservations or rentals.
+
+## Rental-Level Insurance Deductible
+
+The insurance deductible applies to the entire rental rather than separately to each damage event.
+
+For damages covered by the selected insurance package, the customer's total liability during a single rental cannot exceed the stored deductible amount.
+
+Damages excluded from insurance coverage are not limited by the deductible and may result in full customer liability.
