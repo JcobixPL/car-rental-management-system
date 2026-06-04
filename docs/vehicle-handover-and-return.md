@@ -80,3 +80,31 @@ An employee must review each proposed charge and can:
 - waive the charge with a required justification.
 
 The system records the employee, original proposed amount, final amount, decision, reason and timestamp.
+
+## Deposit and Post-Rental Balance
+
+A vehicle deposit is a security amount collected during vehicle pickup.
+
+Approved post-rental charges can be deducted from the deposit.
+
+If the approved charges exceed the available deposit amount, the remaining amount becomes an outstanding customer balance.
+
+If the deposit exceeds the approved charges, the remaining deposit amount is returned to the customer.
+
+An outstanding post-rental balance must be paid within the configured payment period.
+
+The default payment period is 7 days.
+
+## Damage Liability and Insurance Deductible
+
+Damage charges depend on the insurance package selected for the rental and the applicable coverage rules.
+
+An insurance package can define a customer deductible.
+
+The deductible limits the customer's liability for a covered damage event.
+
+The deposit amount and the insurance deductible are separate values.
+
+If a damage is excluded from insurance coverage, the customer may be responsible for the full approved damage cost.
+
+All damage charges must be reviewed and approved by an employee before they are applied.
