@@ -469,3 +469,13 @@ A customer can request a child seat during reservation.
 An employee confirms child seat availability before vehicle pickup.
 
 Detailed child seat inventory management may be added in a future version.
+
+## Vehicle Preparation Buffer
+
+The system requires a preparation buffer between a planned vehicle return and the next planned vehicle pickup.
+
+The default preparation buffer is 1 hour.
+
+The preparation buffer can be configured by an administrator.
+
+A vehicle is not considered available for a new reservation until the preparation buffer has elapsed.

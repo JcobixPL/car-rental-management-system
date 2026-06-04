@@ -282,3 +282,5 @@ A vehicle is unavailable during a requested period if:
 - the vehicle is part of an active rental that overlaps the requested period.
 
 A vehicle can be reserved during one period and available during another period.
+
+Vehicle availability calculations must include the configured preparation buffer between a planned return and the next pickup.
