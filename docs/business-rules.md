@@ -445,3 +445,9 @@ The following optional services are non-refundable after they have been added to
 - additional driver fees.
 
 Early vehicle return does not create a refund for these services.
+
+## Child Seat Pricing
+
+A child seat is charged once for the entire rental.
+
+The child seat fee does not depend on the number of rental days.
