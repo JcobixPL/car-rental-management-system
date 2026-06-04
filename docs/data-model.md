@@ -419,3 +419,27 @@ The customer has been blacklisted by an employee or administrator and cannot cre
 ### Anonymized
 
 The customer's personal data has been anonymized while historical business records remain available.
+
+## Reservation
+
+Reservation represents a planned rental before vehicle handover.
+
+A reservation stores:
+
+- customer,
+- reserved vehicle category,
+- optional assigned vehicle,
+- pickup branch,
+- return branch,
+- planned pickup date and time,
+- planned return date and time,
+- reservation status,
+- creation timestamp,
+- optional confirmation timestamp,
+- optional cancellation timestamp,
+- optional cancellation reason,
+- total reservation price.
+
+AssignedVehicleId is optional because an employee can confirm a reservation before assigning a specific vehicle.
+
+Reservation pickup and return periods are stored using exact dates and times rather than only calendar dates.
