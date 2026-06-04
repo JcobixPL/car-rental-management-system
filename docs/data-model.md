@@ -558,3 +558,31 @@ A return record stores:
 - employee who received the vehicle.
 
 Damage and equipment records are stored separately and associated with the handover or return record.
+
+## Vehicle Condition Damage Records
+
+Vehicle damages recorded during handover and return are stored as separate structured records.
+
+A damage record stores:
+
+- associated handover or return record,
+- damage description,
+- vehicle location,
+- severity,
+- recording timestamp,
+- employee who recorded the damage.
+
+The system compares damage records from vehicle handover and return to identify newly reported damage.
+
+## Vehicle Condition Equipment Records
+
+Vehicle equipment checks recorded during handover and return are stored as separate structured records.
+
+An equipment record stores:
+
+- associated handover or return record,
+- equipment item type,
+- presence status,
+- optional comment.
+
+The system compares equipment records from vehicle handover and return to identify missing equipment.
