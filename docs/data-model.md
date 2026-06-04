@@ -284,3 +284,20 @@ A vehicle is unavailable during a requested period if:
 A vehicle can be reserved during one period and available during another period.
 
 Vehicle availability calculations must include the configured preparation buffer between a planned return and the next pickup.
+
+## Vehicle Branch History
+
+Vehicle stores the current branch assignment in CurrentBranchId.
+
+Each change of the vehicle's branch creates a VehicleBranchHistory record.
+
+A vehicle branch history record stores:
+
+- vehicle,
+- previous branch,
+- new branch,
+- employee who performed the change,
+- change timestamp,
+- optional reason.
+
+The branch history cannot be deleted or modified through ordinary application operations.
