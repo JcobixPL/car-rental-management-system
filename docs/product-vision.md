@@ -46,9 +46,13 @@ An employee can approve the reservation based on the expected availability of th
 
 A specific vehicle does not need to be assigned at the moment the reservation is approved.
 
-A specific available vehicle from the reserved category or from a higher category without increasing the customer's price must be assigned before vehicle pickup.
+A specific available vehicle from any category can be assigned to the reservation by an employee.
 
-If no suitable vehicle is available before pickup, the employee may cancel the reservation and must provide a cancellation reason.Vehicle Assignment Changes
+The customer always pays the price of the originally reserved vehicle category.
+
+If no suitable vehicle is available before pickup, the employee may cancel the reservation and must provide a cancellation reason.
+
+Vehicle Assignment Changes
 
 An employee may change the vehicle assigned to an approved reservation before the vehicle is handed over to the customer.
 

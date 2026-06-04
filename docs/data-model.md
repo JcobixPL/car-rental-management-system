@@ -89,3 +89,25 @@ Branch opening hours exceptions are configured independently for each branch.
 
 When validating pickup and return times, a date-specific exception takes priority over the standard weekly opening hours.
 
+
+## VehicleCategory
+
+VehicleCategory represents a reservation category rather than a specific vehicle model.
+
+A vehicle category stores:
+
+- code,
+- name,
+- transmission type,
+- description,
+- active status.
+
+Vehicle category codes can include values such as A, A+, B, B+, C, C+, D, D+, E, F, M, M+, R, R+, SUV, SUV+, Pickup and Pickup+.
+
+Transmission type is stored separately from the category code.
+
+Vehicle categories do not use an upgrade hierarchy.
+
+An employee can assign any available vehicle from any category to a reservation.
+
+The customer always pays the price of the originally reserved category, regardless of the category of the assigned vehicle.
