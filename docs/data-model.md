@@ -137,3 +137,11 @@ The calculated reservation price is stored as a price snapshot and is not change
 Vehicle category pricing is shared across the entire rental company.
 
 Branches do not define separate prices for the same vehicle category.
+
+## Vehicle Category Deposit
+
+The standard deposit amount is configured per vehicle category.
+
+Deposit amounts are shared across the entire rental company.
+
+Branches do not define separate deposit amounts for the same vehicle category.
