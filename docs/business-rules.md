@@ -212,3 +212,9 @@ The default maximum rental duration is 60 days.
 An approved rental extension uses the pricing rules from the original reservation.
 
 If the customer wants to rent the vehicle beyond the maximum rental duration, the current rental must be completed and a new reservation must be created using the current pricing configuration.
+
+## Reservation Booking Window
+
+The maximum time in advance that a customer can create a reservation is configured by an administrator.
+
+The default booking window is 3 months.
