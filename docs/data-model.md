@@ -301,3 +301,30 @@ A vehicle branch history record stores:
 - optional reason.
 
 The branch history cannot be deleted or modified through ordinary application operations.
+
+## Vehicle Mileage History
+
+Vehicle stores the current mileage in CurrentMileage for efficient access.
+
+Each mileage change creates a VehicleMileageHistory record.
+
+A vehicle mileage history record stores:
+
+- vehicle,
+- mileage value,
+- recorded timestamp,
+- user who recorded the mileage,
+- mileage source,
+- optional reason.
+
+Mileage source is required and can include:
+
+- VehicleRegistration,
+- RentalHandover,
+- RentalReturn,
+- VehicleCase,
+- AdministratorCorrection.
+
+Historical mileage records cannot be deleted or modified through ordinary application operations.
+
+An administrator correction creates a new history record rather than changing an existing record.
