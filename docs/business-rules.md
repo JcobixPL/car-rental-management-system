@@ -389,3 +389,7 @@ If the selected pickup or return time is outside the branch opening hours, an ad
 The out-of-hours service fee is configured by an administrator.
 
 The applicable fee is stored as part of the reservation price snapshot.
+
+Out-of-hours pickup and return do not require employee approval.
+
+The service is always available when the applicable fee is added to the reservation.
