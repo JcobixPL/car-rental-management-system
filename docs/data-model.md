@@ -722,3 +722,24 @@ Outstanding balance status is stored as an enum with values:
 - Open,
 - Paid,
 - Cancelled.
+
+## AuditLog
+
+AuditLog records important business actions and changes to sensitive or business-critical data.
+
+An audit log record stores:
+
+- user account who performed the action,
+- action type,
+- affected entity type,
+- affected entity identifier,
+- timestamp,
+- optional previous values,
+- optional new values,
+- optional reason.
+
+Audit logs are separate from technical application logs.
+
+Audit log records are immutable and cannot be deleted or modified through ordinary application operations.
+
+Sensitive values must be masked or omitted from audit log payloads.
