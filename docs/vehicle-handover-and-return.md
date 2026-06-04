@@ -48,3 +48,15 @@ An equipment item can be configured as required for vehicle handover.
 By default, the fire extinguisher and warning triangle are required for handover.
 
 A missing non-required equipment item does not block vehicle handover, but the missing item must be recorded.
+
+## Missing Equipment After Return
+
+If an equipment item was present during vehicle handover but is missing during vehicle return, the system creates a post-rental review task.
+
+The employee reviews the missing item and decides whether to:
+
+- charge the customer,
+- waive the charge,
+- create a vehicle case.
+
+The decision, reason and employee must be recorded.
