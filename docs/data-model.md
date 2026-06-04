@@ -471,3 +471,21 @@ Price item types can include:
 - OutOfHoursReturnFee.
 
 Reservation price items represent pricing snapshots and are not changed by later pricing configuration updates.
+
+## Reservation Additional Drivers
+
+Additional drivers are stored as separate records associated with a reservation.
+
+A ReservationAdditionalDriver record stores:
+
+- reservation,
+- first name,
+- last name,
+- phone number,
+- driving license number,
+- driving license issuing country,
+- driving license expiry date.
+
+Each additional driver must have a valid driving license before vehicle handover.
+
+The number of additional drivers is derived from the associated records rather than stored as a separate value.
