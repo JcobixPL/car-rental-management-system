@@ -1,7 +1,9 @@
-﻿## Vehicle Assignment
+﻿## Confirmation Without Expected Availability
 
-A confirmed reservation may temporarily exist without a specific assigned vehicle.
+An employee may confirm a reservation even when the system predicts that no vehicle from the reserved category will be available.
 
-A specific vehicle must be assigned before the reservation can be converted into an active rental.
+The system must display a warning before confirmation.
 
-The system must not allow vehicle handover when no vehicle is assigned.
+The employee must provide a reason for confirming the reservation despite the predicted lack of availability.
+
+A confirmed reservation cannot be converted into an active rental until a specific vehicle is assigned.
