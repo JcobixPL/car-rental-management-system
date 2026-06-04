@@ -357,3 +357,15 @@ The system records the user who performed the action, timestamp and reason in th
 A blacklisted customer can still sign in and view their previous reservations, rental history and outstanding balances.
 
 A blacklisted customer cannot create new reservations.
+
+## Blacklist Impact on Future Reservations
+
+When a customer is added to the blacklist, the system blocks the customer from creating new reservations.
+
+The system automatically cancels all future reservations belonging to the blacklisted customer.
+
+Automatically cancelled reservations must include a cancellation reason indicating that the customer was blacklisted.
+
+If a cancelled reservation was paid in advance, the customer receives a full refund.
+
+The system records the automatic cancellations in the audit log.
