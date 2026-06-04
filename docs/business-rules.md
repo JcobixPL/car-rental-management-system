@@ -436,3 +436,12 @@ The refund does not require employee approval.
 The refund calculation uses the pricing snapshots stored for the reservation.
 
 The system records the original amount, recalculated amount, refund amount and timestamp.
+
+## Non-Refundable Optional Services
+
+The following optional services are non-refundable after they have been added to a reservation or rental:
+
+- permission to travel abroad,
+- additional driver fees.
+
+Early vehicle return does not create a refund for these services.
