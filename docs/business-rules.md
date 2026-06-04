@@ -276,3 +276,20 @@ An employee can initiate a payment, but cannot manually mark the payment as comp
 The simulated terminal returns a payment result, such as approved or declined.
 
 The system records the payment result, timestamp and employee who initiated the transaction.
+
+## Payment Attempt History
+
+Each payment attempt creates a separate immutable history record.
+
+A payment attempt record includes:
+
+- payment method,
+- requested amount,
+- result status,
+- timestamp,
+- employee who initiated the transaction, when applicable,
+- failure reason, when available.
+
+Failed payment attempts cannot be deleted or changed.
+
+Payment attempt history is separate from the technical application logs and the audit log.
