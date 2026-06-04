@@ -16,25 +16,31 @@ namespace CarRentalManagementSystem.Infrastructure.Data.Configurations
             builder.HasKey(b => b.Id);
 
             builder.Property(b => b.Id)
+                .HasColumnName("id")
                 .ValueGeneratedNever();
 
             builder.Property(b => b.City)
+                .HasColumnName("city")
                 .IsRequired()
                 .HasMaxLength(100);
 
             builder.Property(b => b.Address)
+                .HasColumnName("address")
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(250);
 
             builder.Property(b => b.PhoneNumber)
+                .HasColumnName("phone_number")
                 .IsRequired()
-                .HasMaxLength(35);
+                .HasMaxLength(30);
 
             builder.Property(b => b.Email)
+                .HasColumnName("email")
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(255);
 
             builder.Property(b => b.IsActive)
+                .HasColumnName("is_active")
                 .IsRequired();
         }
     }
