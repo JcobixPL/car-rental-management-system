@@ -328,3 +328,42 @@ Mileage source is required and can include:
 Historical mileage records cannot be deleted or modified through ordinary application operations.
 
 An administrator correction creates a new history record rather than changing an existing record.
+
+## Customer
+
+Customer represents a rental company customer and stores business data rather than authentication data.
+
+A customer stores:
+
+- first name,
+- last name,
+- email address,
+- phone number,
+- date of birth,
+- status,
+- creation timestamp.
+
+A customer can be identified using different types of identity documents.
+
+## Customer Identity Document
+
+Customer identity documents are stored in a separate CustomerIdentityDocument entity.
+
+An identity document stores:
+
+- customer,
+- document type,
+- document number,
+- issuing country,
+- optional expiry date,
+- primary document flag,
+- verification timestamp,
+- employee who verified the document.
+
+Supported document types can include:
+
+- NationalId,
+- Passport,
+- ForeignIdentityCard.
+
+A customer does not need to have a national identification number if another accepted identity document is available.
