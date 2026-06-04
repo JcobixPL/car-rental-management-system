@@ -35,3 +35,20 @@ Additional service prices are configured by an administrator.
 The price for each additional rental day may be reduced by a configurable percentage.
 
 The daily price cannot fall below a configurable minimum daily amount.
+
+## Price Snapshot
+
+The price of each item added to a reservation is fixed at the moment the item is selected.
+
+This applies to:
+
+- vehicle category rental price,
+- insurance packages,
+- additional drivers,
+- permission to travel abroad,
+- child seats,
+- other optional services.
+
+If an administrator changes the pricing configuration, existing reservation items keep their original prices.
+
+If a customer adds an optional service later, for example during vehicle pickup, the current price at the time of adding the service is used.
