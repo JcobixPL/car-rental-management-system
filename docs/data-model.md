@@ -527,3 +527,34 @@ Rental stores the terms applicable to the specific rental, including:
 - mileage limit,
 - exceeded mileage price,
 - travel abroad permission terms.
+
+## Vehicle Handover and Return Records
+
+Vehicle condition data is stored in separate records for handover and return.
+
+## VehicleHandover
+
+VehicleHandover stores the vehicle condition when the vehicle is handed over to the customer.
+
+A handover record stores:
+
+- rental,
+- mileage,
+- fuel level,
+- handover date and time,
+- employee who performed the handover,
+- customer confirmation timestamp.
+
+## VehicleReturn
+
+VehicleReturn stores the vehicle condition when the vehicle is returned.
+
+A return record stores:
+
+- rental,
+- mileage,
+- fuel level,
+- return date and time,
+- employee who received the vehicle.
+
+Damage and equipment records are stored separately and associated with the handover or return record.
