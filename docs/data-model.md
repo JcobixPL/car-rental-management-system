@@ -90,17 +90,18 @@ Branch opening hours exceptions are configured independently for each branch.
 When validating pickup and return times, a date-specific exception takes priority over the standard weekly opening hours.
 
 
+
 ## VehicleCategory
 
 VehicleCategory represents a reservation category rather than a specific vehicle model.
 
 A vehicle category stores:
 
-- code,
-- name,
-- transmission type,
-- description,
-- active status.
+* code,
+* name,
+* transmission type,
+* description,
+* active status.
 
 Vehicle category codes can include values such as A, A+, B, B+, C, C+, D, D+, E, F, M, M+, R, R+, SUV, SUV+, Pickup and Pickup+.
 
@@ -122,13 +123,13 @@ A vehicle category can have multiple pricing records over time.
 
 A pricing record stores:
 
-- vehicle category,
-- daily price,
-- minimum daily price,
-- daily discount percentage,
-- validity start date,
-- optional validity end date,
-- active status.
+* vehicle category,
+* daily price,
+* minimum daily price,
+* daily discount percentage,
+* validity start date,
+* optional validity end date,
+* active status.
 
 When a reservation is created, the system uses the currently applicable pricing record.
 
@@ -154,11 +155,11 @@ A vehicle category can have multiple deposit records over time.
 
 A deposit record stores:
 
-- vehicle category,
-- deposit amount,
-- validity start date,
-- optional validity end date,
-- active status.
+* vehicle category,
+* deposit amount,
+* validity start date,
+* optional validity end date,
+* active status.
 
 The applicable deposit amount is stored as part of the reservation or rental terms so that later configuration changes do not affect existing reservations or rentals.
 
@@ -172,12 +173,12 @@ InsurancePackageVersion stores the configuration valid during a specific period.
 
 A package version stores:
 
-- insurance package,
-- price,
-- deposit reduction percentage,
-- validity start date,
-- optional validity end date,
-- active status.
+* insurance package,
+* price,
+* deposit reduction percentage,
+* validity start date,
+* optional validity end date,
+* active status.
 
 The insurance deductible depends on both the insurance package version and the vehicle category.
 
@@ -206,42 +207,33 @@ The system should distinguish between planned insurance days, used insurance day
 Rental refunds for early vehicle return are calculated using the stored reservation pricing snapshot.
 
 The system should distinguish between the planned rental period, actual rental period, original rental price and recalculated actual rental price.
+
 ## Vehicle
 
 Vehicle represents a specific physical car.
 
 A vehicle stores:
 
-- VIN,
-- registration number,
-- make,
-- model,
-- production year,
-- vehicle category,
-- current branch,
-- current mileage,
-- fuel type,
-- transmission type,
-- status,
-- next technical inspection date,
-- next service mileage,
-- next service date.
+* VIN,
+* registration number,
+* make,
+* model,
+* production year,
+* vehicle category,
+* current branch,
+* current mileage,
+* fuel type,
+* transmission type,
+* status,
+* next technical inspection date,
+* next service mileage,
+* next service date.
 
 Transmission type is stored directly in Vehicle even though the vehicle category may also imply a transmission type.
 
 The system should validate that the vehicle transmission type is compatible with the assigned vehicle category.
 
 The number of kilometers remaining until the next service is calculated from the current mileage and next service mileage rather than stored directly.
-
-## Vehicle Statuses
-
-A vehicle can have one of the following statuses:
-
-- Available,
-- Reserved,
-- Rented,
-- Unavailable,
-- Withdrawn.
 
 ### Available
 
@@ -262,3 +254,31 @@ The vehicle is temporarily unavailable, for example because of a blocking vehicl
 ### Withdrawn
 
 The vehicle has been withdrawn from operational use and cannot be assigned to new reservations.
+
+## Vehicle Operational Status
+
+A vehicle has an operational status:
+
+- Active,
+- Withdrawn.
+
+### Active
+
+The vehicle is part of the rental fleet and may be available for reservations.
+
+### Withdrawn
+
+The vehicle has been withdrawn from operational use and cannot be assigned to new reservations.
+
+## Vehicle Availability
+
+Vehicle availability is calculated for a specific date and time range.
+
+A vehicle is unavailable during a requested period if:
+
+- the vehicle is withdrawn,
+- an open blocking vehicle case overlaps the requested period,
+- the vehicle is assigned to another confirmed reservation that overlaps the requested period,
+- the vehicle is part of an active rental that overlaps the requested period.
+
+A vehicle can be reserved during one period and available during another period.
