@@ -137,3 +137,12 @@ After verification, the customer can view and manage their current and previous 
 A customer may later activate a full user account.
 
 Sensitive identification data, such as a national identification number, must not be used as a login or account identifier.
+
+## Customer Authentication
+
+A customer can sign in using one of the following methods:
+
+- email address and password,
+- one-time verification code sent to the customer's email address.
+
+One-time codes expire after a limited period and cannot be reused.
