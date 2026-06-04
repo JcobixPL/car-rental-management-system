@@ -493,3 +493,37 @@ The number of additional drivers is derived from the associated records rather t
 An additional driver is stored only within the context of a specific reservation.
 
 An additional driver does not need to exist as a Customer in the system.
+
+## Rental
+
+Rental represents an active or completed vehicle rental created from a reservation.
+
+A rental stores:
+
+- reservation,
+- vehicle,
+- customer,
+- pickup branch,
+- planned return branch,
+- optional actual return branch,
+- rental start date and time,
+- planned return date and time,
+- optional actual return date and time,
+- rental status,
+- deposit amount,
+- returned deposit amount,
+- final total amount.
+
+A reservation can create zero or one rental.
+
+A cancelled reservation does not create a rental.
+
+A reservation creates exactly one rental when the vehicle is handed over to the customer.
+
+Rental stores the terms applicable to the specific rental, including:
+
+- selected insurance package,
+- insurance deductible,
+- mileage limit,
+- exceeded mileage price,
+- travel abroad permission terms.
