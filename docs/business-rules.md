@@ -379,3 +379,13 @@ Blacklisting does not cancel or terminate the active rental.
 The customer must return the vehicle according to the rental agreement.
 
 The system blocks new reservations, cancels future reservations and displays a warning to employees handling the active rental and vehicle return.
+
+## Out-of-Hours Pickup and Return
+
+A customer can select any pickup or return time.
+
+If the selected pickup or return time is outside the branch opening hours, an additional out-of-hours service fee applies.
+
+The out-of-hours service fee is configured by an administrator.
+
+The applicable fee is stored as part of the reservation price snapshot.

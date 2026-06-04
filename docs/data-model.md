@@ -4,18 +4,18 @@
 
 The initial data model includes:
 
-- UserAccount,
-- Employee,
-- Customer,
-- Branch,
-- Vehicle,
-- VehicleCategory,
-- VehicleCase,
-- Reservation,
-- Rental,
-- Payment,
-- OutstandingBalance,
-- AuditLog.
+* UserAccount,
+* Employee,
+* Customer,
+* Branch,
+* Vehicle,
+* VehicleCategory,
+* VehicleCase,
+* Reservation,
+* Rental,
+* Payment,
+* OutstandingBalance,
+* AuditLog.
 
 ## UserAccount
 
@@ -23,9 +23,9 @@ UserAccount represents an account used to authenticate a person in the system.
 
 A user account has exactly one role:
 
-- Administrator,
-- Employee,
-- Customer.
+* Administrator,
+* Employee,
+* Customer.
 
 Administrator is not a separate entity. An administrator is a user account with the Administrator role.
 
@@ -37,9 +37,9 @@ Employee represents a rental company employee.
 
 Each employee:
 
-- has exactly one UserAccount,
-- has exactly one role,
-- is assigned to exactly one Branch.
+* has exactly one UserAccount,
+* has exactly one role,
+* is assigned to exactly one Branch.
 
 ## Customer
 
@@ -57,17 +57,17 @@ Branch represents a physical rental company location.
 
 A branch stores:
 
-- name,
-- city,
-- address,
-- phone number,
-- email address,
-- active status,
-- opening hours.
+* name,
+* city,
+* address,
+* phone number,
+* email address,
+* active status,
+* opening hours.
 
 Opening hours are stored separately for each day of the week.
 
-The system uses branch opening hours to validate planned vehicle pickup and return times.
+The system uses branch opening hours to determine whether an additional out-of-hours service fee applies to a planned vehicle pickup or return.
 
 Branch opening hours are configured independently for each branch.
 
@@ -81,10 +81,11 @@ Each branch can define exceptions to its standard opening hours for specific cal
 
 An exception can:
 
-- mark the branch as closed,
-- define shortened opening hours,
-- define extended opening hours.
+* mark the branch as closed,
+* define shortened opening hours,
+* define extended opening hours.
 
 Branch opening hours exceptions are configured independently for each branch.
 
 When validating pickup and return times, a date-specific exception takes priority over the standard weekly opening hours.
+
