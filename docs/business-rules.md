@@ -333,3 +333,13 @@ Customer rental history must remain available for operational, accounting and le
 After the retention period expires and there is no legal or business reason to keep the personal data, the customer profile should be anonymized.
 
 Anonymization must preserve historical rental records while removing or replacing personal identification data.
+
+## Customer Blacklist
+
+An employee or administrator can add a customer to the blacklist.
+
+Adding a customer to the blacklist requires a selected reason and an additional comment.
+
+The system records the user who performed the action, timestamp and reason in the audit log.
+
+A blacklisted customer cannot create new reservations.
