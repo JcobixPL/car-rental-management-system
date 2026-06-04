@@ -426,3 +426,13 @@ The actual rental price is recalculated using the pricing snapshot stored when t
 Later pricing changes do not affect the refund calculation.
 
 Only full unused rental days are eligible for a refund.
+
+## Automatic Refund for Early Return
+
+If a customer returns the vehicle earlier than planned, the system automatically calculates and creates the refund for unused rental and insurance days.
+
+The refund does not require employee approval.
+
+The refund calculation uses the pricing snapshots stored for the reservation.
+
+The system records the original amount, recalculated amount, refund amount and timestamp.
