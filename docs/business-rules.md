@@ -459,3 +459,13 @@ A customer can remove a child seat from the reservation before vehicle pickup.
 If the child seat is removed before pickup, the customer is not charged for it.
 
 After vehicle pickup, the child seat fee is non-refundable.
+
+## Child Seat Availability
+
+The MVP does not track child seat inventory per branch.
+
+A customer can request a child seat during reservation.
+
+An employee confirms child seat availability before vehicle pickup.
+
+Detailed child seat inventory management may be added in a future version.
