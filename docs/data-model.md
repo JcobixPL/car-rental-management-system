@@ -68,3 +68,9 @@ A branch stores:
 Opening hours are stored separately for each day of the week.
 
 The system uses branch opening hours to validate planned vehicle pickup and return times.
+
+Branch opening hours are configured independently for each branch.
+
+Each day of the week can have its own opening and closing time.
+
+A branch can be marked as closed on a selected day.
