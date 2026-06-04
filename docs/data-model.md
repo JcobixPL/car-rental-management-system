@@ -50,3 +50,21 @@ A customer can exist without a UserAccount.
 A customer may later activate a UserAccount to access their reservations and rental history.
 
 A Customer can have zero or one UserAccount.
+
+## Branch
+
+Branch represents a physical rental company location.
+
+A branch stores:
+
+- name,
+- city,
+- address,
+- phone number,
+- email address,
+- active status,
+- opening hours.
+
+Opening hours are stored separately for each day of the week.
+
+The system uses branch opening hours to validate planned vehicle pickup and return times.
