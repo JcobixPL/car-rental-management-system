@@ -451,3 +451,11 @@ Early vehicle return does not create a refund for these services.
 A child seat is charged once for the entire rental.
 
 The child seat fee does not depend on the number of rental days.
+
+## Child Seat Removal
+
+A customer can remove a child seat from the reservation before vehicle pickup.
+
+If the child seat is removed before pickup, the customer is not charged for it.
+
+After vehicle pickup, the child seat fee is non-refundable.
