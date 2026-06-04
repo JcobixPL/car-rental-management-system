@@ -103,3 +103,13 @@ After the outstanding balance is fully paid, the customer can create new reserva
 A customer can choose to pay for a reservation online during the reservation process or pay during vehicle pickup.
 
 The selected payment method does not change the reservation price.
+
+## Supported Payment Methods
+
+The system supports the following payment methods:
+
+- online card payment,
+- online bank transfer,
+- card payment at a rental branch.
+
+Cash payments are not supported.
