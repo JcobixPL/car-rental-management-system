@@ -119,3 +119,21 @@ Cash payments are not supported.
 Online payments are simulated within the application.
 
 The payment implementation should be designed so that a real external payment gateway can be integrated in the future without changing the core business logic.
+
+## Customer Account and Guest Reservations
+
+A customer can create a reservation without having an existing user account.
+
+During the reservation process, the customer provides contact and identification data required by the rental company.
+
+The system creates a customer profile for business purposes.
+
+A customer profile is separate from a user account.
+
+The customer can verify their email address using a one-time verification code or secure link.
+
+After verification, the customer can view and manage their current and previous reservations.
+
+A customer may later activate a full user account.
+
+Sensitive identification data, such as a national identification number, must not be used as a login or account identifier.
