@@ -97,3 +97,9 @@ The final deposit amount is calculated at pickup because it may be reduced by th
 A customer can pay an outstanding balance online or through an employee at a rental branch.
 
 After the outstanding balance is fully paid, the customer can create new reservations.
+
+## Reservation Payment
+
+A customer can choose to pay for a reservation online during the reservation process or pay during vehicle pickup.
+
+The selected payment method does not change the reservation price.
