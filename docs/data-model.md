@@ -145,3 +145,19 @@ The standard deposit amount is configured per vehicle category.
 Deposit amounts are shared across the entire rental company.
 
 Branches do not define separate deposit amounts for the same vehicle category.
+
+## Vehicle Category Deposit History
+
+The standard deposit amount is stored in a separate VehicleCategoryDeposit entity.
+
+A vehicle category can have multiple deposit records over time.
+
+A deposit record stores:
+
+- vehicle category,
+- deposit amount,
+- validity start date,
+- optional validity end date,
+- active status.
+
+The applicable deposit amount is stored as part of the reservation or rental terms so that later configuration changes do not affect existing reservations or rentals.
