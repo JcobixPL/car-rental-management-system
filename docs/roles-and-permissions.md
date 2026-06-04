@@ -33,3 +33,13 @@ Vehicle-related cases may include:
 - administrative matters.
 
 An employee cannot freely modify historical mileage records. Corrections require administrator permissions and must be recorded in the audit log.
+
+## Customer Data Management
+
+An employee can create and update customer data required for rental operations.
+
+Changes to sensitive customer identification data must be recorded in the audit log.
+
+The system records the employee, timestamp, changed field and reason for the change when applicable.
+
+Sensitive values should be masked in the user interface and should not be exposed in ordinary application logs.
