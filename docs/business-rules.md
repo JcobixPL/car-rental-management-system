@@ -67,3 +67,9 @@ During an active rental, the customer may request:
 - a change of the return branch.
 
 Changes to the return date or return branch require employee approval because they may affect vehicle availability and branch operations.
+
+## Customer Reservation Cancellation
+
+A customer can cancel their own reservation before vehicle pickup.
+
+The system records the cancellation date, cancellation reason and the user who performed the cancellation.
