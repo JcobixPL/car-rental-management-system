@@ -73,3 +73,21 @@ Changes to the return date or return branch require employee approval because th
 A customer can cancel their own reservation before vehicle pickup.
 
 The system records the cancellation date, cancellation reason and the user who performed the cancellation.
+
+## Late Cancellation Fee
+
+If a customer cancels a reservation less than the configured number of hours before the planned pickup time, a cancellation fee is charged.
+
+The cancellation fee percentage and time threshold are configured by an administrator.
+
+If the reservation was paid in advance, the refund is reduced by the cancellation fee.
+
+If the reservation was not paid in advance, the system creates an outstanding customer balance.
+
+A customer with an unpaid outstanding balance cannot create a new reservation until the balance is paid.
+
+## Deposit Payment
+
+The vehicle deposit is paid during vehicle pickup.
+
+The final deposit amount is calculated at pickup because it may be reduced by the selected insurance package.
