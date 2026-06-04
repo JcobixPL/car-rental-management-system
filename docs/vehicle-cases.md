@@ -63,3 +63,11 @@ An invoice record can include:
 - optional document attachment.
 
 The MVP does not include full accounting or invoice validation.
+
+## Multiple Active Cases
+
+A vehicle can have multiple active cases at the same time.
+
+If at least one active case blocks the vehicle during a given date range, the vehicle is unavailable during that period.
+
+Non-blocking cases do not make the vehicle unavailable.
