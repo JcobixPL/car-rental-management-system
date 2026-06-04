@@ -52,3 +52,18 @@ This applies to:
 If an administrator changes the pricing configuration, existing reservation items keep their original prices.
 
 If a customer adds an optional service later, for example during vehicle pickup, the current price at the time of adding the service is used.
+
+## Reservation and Rental Changes
+
+Before vehicle pickup, a customer can manage their own reservation and add or remove optional services.
+
+Insurance can only be purchased before the vehicle is handed over to the customer.
+
+During an active rental, the customer may request:
+
+- a child seat,
+- permission to travel abroad,
+- a change of the planned return date,
+- a change of the return branch.
+
+Changes to the return date or return branch require employee approval because they may affect vehicle availability and branch operations.
