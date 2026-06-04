@@ -388,3 +388,9 @@ A driving license record stores:
 - employee who verified the document.
 
 A valid and verified driving license is required before vehicle handover.
+
+A customer can have zero or one current driving license record.
+
+When a driving license is replaced or renewed, the current record is updated through a controlled employee verification process.
+
+A customer can exist without a driving license, but a valid and verified driving license is required before vehicle handover.
