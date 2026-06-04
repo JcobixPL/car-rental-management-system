@@ -172,3 +172,15 @@ Two-factor authentication is required for employees and administrators in the pr
 For local development and automated testing, the requirement may be disabled or replaced with a controlled test authentication mechanism.
 
 Development and test authentication behavior must not create a bypass that can be enabled by an ordinary production user.
+
+## Employee Reservation Cancellation
+
+An employee can cancel a pending reservation or an approved reservation before the vehicle is handed over to the customer.
+
+An employee cannot return an approved reservation to the pending status.
+
+Employee cancellation requires a cancellation reason.
+
+If an employee cancels a reservation, the customer receives a full refund regardless of the time remaining before the planned pickup.
+
+The cancellation fee does not apply when the cancellation is performed by an employee.
