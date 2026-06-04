@@ -184,3 +184,11 @@ Employee cancellation requires a cancellation reason.
 If an employee cancels a reservation, the customer receives a full refund regardless of the time remaining before the planned pickup.
 
 The cancellation fee does not apply when the cancellation is performed by an employee.
+
+## Reservation Conversion to Active Rental
+
+After the vehicle is handed over to the customer, the reservation becomes an active rental.
+
+An active rental cannot be cancelled.
+
+The rental must be completed through the vehicle return process.
