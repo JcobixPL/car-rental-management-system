@@ -351,3 +351,9 @@ An employee or administrator can remove a customer from the blacklist.
 Removing a customer from the blacklist requires a reason and an additional comment.
 
 The system records the user who performed the action, timestamp and reason in the audit log.
+
+## Blacklisted Customer Account Access
+
+A blacklisted customer can still sign in and view their previous reservations, rental history and outstanding balances.
+
+A blacklisted customer cannot create new reservations.
