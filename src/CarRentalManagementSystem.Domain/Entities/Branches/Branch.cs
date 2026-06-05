@@ -25,6 +25,18 @@
             IsActive = true;
         }
 
+        public void UpdateDetails(
+            string city,
+            string address,
+            string phoneNumber,
+            string email)
+        {
+            City = city;
+            Address = address;
+            PhoneNumber = phoneNumber;
+            Email= email;
+        }
+
         public void Deactivate()
         {
             IsActive = false;

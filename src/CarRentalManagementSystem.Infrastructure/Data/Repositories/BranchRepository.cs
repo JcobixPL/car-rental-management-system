@@ -30,7 +30,6 @@ namespace CarRentalManagementSystem.Infrastructure.Data.Repositories
         public async Task<Branch?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
             return await _dbContext.Branches
-                .AsNoTracking()
                 .FirstOrDefaultAsync(b => b.Id == id, cancellationToken);
         }
 

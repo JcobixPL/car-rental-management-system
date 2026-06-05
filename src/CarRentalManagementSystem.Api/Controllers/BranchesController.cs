@@ -1,5 +1,6 @@
 ﻿using CarRentalManagementSystem.Application.Branches.CreateBranch;
 using CarRentalManagementSystem.Application.Branches.Get;
+using CarRentalManagementSystem.Application.Branches.Update;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRentalManagementSystem.Api.Controllers
@@ -11,15 +12,18 @@ namespace CarRentalManagementSystem.Api.Controllers
         private readonly CreateBranchService _createBranchService;
         private readonly GetBranchesService _getBranchesService;
         private readonly GetBranchByIdService _getBranchByIdService;
+        private readonly UpdateBranchService _updateBranchService;
 
         public BranchesController(
             CreateBranchService createBranchService,
             GetBranchesService getBranchesService,
-            GetBranchByIdService getBranchByIdService)
+            GetBranchByIdService getBranchByIdService,
+            UpdateBranchService updateBranchService)
         {
             _createBranchService = createBranchService;
             _getBranchesService = getBranchesService;
             _getBranchByIdService = getBranchByIdService;
+            _updateBranchService = updateBranchService;
         }
 
         [HttpGet]
@@ -52,6 +56,17 @@ namespace CarRentalManagementSystem.Api.Controllers
                 nameof(GetById),
                 new { id = branch.Id },
                 branch);
+        }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> Update(
+            Guid id,
+            UpdateBranchRequest request,
+            CancellationToken cancellationToken)
+        {
+            await _updateBranchService.UpdateAsync(id, request, cancellationToken);
+
+            return NoContent();
         }
     }
 }
