@@ -15,6 +15,7 @@ namespace CarRentalManagementSystem.Application.Abstractions.Repositories
 
         Task<bool> ExistsByCityAndAddressAsync(string city, string address, CancellationToken cancellationToken = default);
 
+        Task<bool> ExistsByCityAndAddressExceptIdAsync(string city, string address, Guid excludedBranchId, CancellationToken cancellationToken);
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

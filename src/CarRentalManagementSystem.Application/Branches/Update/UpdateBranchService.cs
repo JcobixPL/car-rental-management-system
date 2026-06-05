@@ -27,6 +27,15 @@ namespace CarRentalManagementSystem.Application.Branches.Update
             if (branch is null)
                 throw new NotFoundException("Branch was not found.");
 
+            var branchExists = await _branchRepository.ExistsByCityAndAddressExceptIdAsync(
+                request.City,
+                request.Address,
+                id,
+                cancellationToken);
+
+            if(branchExists)
+                throw new ConflictException("Branch with given city and address already exists.");
+
             branch.UpdateDetails(
                 request.City,
                 request.Address,
