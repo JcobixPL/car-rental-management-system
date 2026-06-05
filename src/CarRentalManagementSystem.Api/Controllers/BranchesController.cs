@@ -1,5 +1,6 @@
 ﻿using CarRentalManagementSystem.Application.Branches.CreateBranch;
 using CarRentalManagementSystem.Application.Branches.Get;
+using CarRentalManagementSystem.Application.Branches.StatusUpdate;
 using CarRentalManagementSystem.Application.Branches.Update;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,17 +14,23 @@ namespace CarRentalManagementSystem.Api.Controllers
         private readonly GetBranchesService _getBranchesService;
         private readonly GetBranchByIdService _getBranchByIdService;
         private readonly UpdateBranchService _updateBranchService;
+        private readonly ActivateBranchService _activateBranchService;
+        private readonly DeactivateBranchService _deactivateBranchService;
 
         public BranchesController(
             CreateBranchService createBranchService,
             GetBranchesService getBranchesService,
             GetBranchByIdService getBranchByIdService,
-            UpdateBranchService updateBranchService)
+            UpdateBranchService updateBranchService,
+            ActivateBranchService activateBranchService,
+            DeactivateBranchService deactivateBranchService)
         {
             _createBranchService = createBranchService;
             _getBranchesService = getBranchesService;
             _getBranchByIdService = getBranchByIdService;
             _updateBranchService = updateBranchService;
+            _activateBranchService = activateBranchService;
+            _deactivateBranchService = deactivateBranchService;
         }
 
         [HttpGet]
@@ -66,6 +73,24 @@ namespace CarRentalManagementSystem.Api.Controllers
         {
             await _updateBranchService.UpdateAsync(id, request, cancellationToken);
 
+            return NoContent();
+        }
+
+        [HttpPut("{id:guid}/activate")]
+        public async Task<IActionResult> Activate(
+            Guid id,
+            CancellationToken cancellationToken)
+        {
+            await _activateBranchService.ActivateAsync(id, cancellationToken);
+            return NoContent();
+        }
+
+        [HttpPut("{id:guid}/deactivate")]
+        public async Task<IActionResult> Deactivate(
+            Guid id,
+            CancellationToken cancellationToken)
+        {
+            await _deactivateBranchService.DeactivateAsync(id, cancellationToken);
             return NoContent();
         }
     }

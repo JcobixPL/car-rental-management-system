@@ -38,6 +38,14 @@ namespace CarRentalManagementSystem.Api.Middleware
                     "Validation Error",
                     exception.Message);
             }
+            catch (NotFoundException exception)
+            {
+                await WriteProblemDetailsAsync(
+                    context,
+                    StatusCodes.Status404NotFound,
+                    "Not Found",
+                    exception.Message);
+            }
             catch (Exception exception)
             {
                 _logger.LogError(exception, "Unhandled exception occurred.");
