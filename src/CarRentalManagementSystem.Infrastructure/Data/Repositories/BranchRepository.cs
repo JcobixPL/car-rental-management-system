@@ -39,6 +39,12 @@ namespace CarRentalManagementSystem.Infrastructure.Data.Repositories
                 .AnyAsync(b => b.City == city && b.Address == address, cancellationToken);
         }
 
+        public async Task<bool> ExistsByCityAndAddressExceptIdAsync(string city, string address, Guid excludedBranchId, CancellationToken cancellationToken = default)
+        {
+            return await _dbContext.Branches
+                .AnyAsync(b => b.City == city && b.Address == address && b.Id != excludedBranchId, cancellationToken);
+        }
+
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return await _dbContext.SaveChangesAsync(cancellationToken);
