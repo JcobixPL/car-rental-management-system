@@ -1,4 +1,5 @@
 ﻿using CarRentalManagementSystem.Domain.Entities.Branches;
+using CarRentalManagementSystem.Domain.Entities.VehicleCategories;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalManagementSystem.Infrastructure.Data
@@ -10,6 +11,7 @@ namespace CarRentalManagementSystem.Infrastructure.Data
         }
 
         public DbSet<Branch> Branches => Set<Branch>();
+        public DbSet<VehicleCategory> VehicleCategories => Set<VehicleCategory>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -18,6 +18,8 @@ namespace CarRentalManagementSystem.Infrastructure
 
             services.AddScoped<IBranchRepository, BranchRepository>();
 
+            services.AddScoped<IVehicleCategoryRepository, VehicleCategoryRepository>();
+
             return services;
         }
     }
