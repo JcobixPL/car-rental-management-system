@@ -5,30 +5,27 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CarRentalManagementSystem.Application.Vehicles.StatusUpdate
+namespace CarRentalManagementSystem.Application.Vehicles.Update
 {
-    public sealed class MarkVehicleAvailableService
+    public sealed class WithdrawVehicleService
     {
         private readonly IVehicleRepository _vehicleRepository;
 
-        public MarkVehicleAvailableService(IVehicleRepository vehicleRepository)
+        public WithdrawVehicleService(IVehicleRepository vehicleRepository)
         {
             _vehicleRepository = vehicleRepository;
         }
 
-        public async Task MarkAsAvailableAsync(
+        public async Task WithdrawAsync(
             Guid id,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken = default)
         {
             var vehicle = await _vehicleRepository.GetByIdAsync(id, cancellationToken);
 
             if (vehicle is null)
                 throw new NotFoundException("Vehicle was not found.");
 
-            if (vehicle.Status == VehicleStatus.Withdrawn)
-                throw new ConflictException("A withdrawn vehicle cannot be marked as available.");
-
-            vehicle.MarkAsAvailable();
+            vehicle.Withdraw();
 
             await _vehicleRepository.SaveChangesAsync(cancellationToken);
         }

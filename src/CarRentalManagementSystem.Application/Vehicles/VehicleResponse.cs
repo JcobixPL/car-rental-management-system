@@ -18,7 +18,7 @@ namespace CarRentalManagementSystem.Application.Vehicles
         int CurrentMileage,
         FuelType FuelType,
         TransmissionType TransmissionType,
-        VehicleStatus Status,
+        VehicleOperationalStatus OperationalStatus,
         DateOnly NextTechnicalInspectionDate,
         int NextServiceMileage,
         DateOnly NextServiceDate);

@@ -35,7 +35,7 @@ namespace CarRentalManagementSystem.Application.Vehicles.Get
                 vehicle.CurrentMileage,
                 vehicle.FuelType,
                 vehicle.TransmissionType,
-                vehicle.Status,
+                vehicle.OperationalStatus,
                 vehicle.NextTechnicalInspectionDate,
                 vehicle.NextServiceMileage,
                 vehicle.NextServiceDate);

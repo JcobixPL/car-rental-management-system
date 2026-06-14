@@ -18,7 +18,7 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
         public int CurrentMileage { get; private set; }
         public FuelType FuelType { get; private set; }
         public TransmissionType TransmissionType { get; private set; }
-        public VehicleStatus Status { get; private set; }
+        public VehicleOperationalStatus OperationalStatus { get; private set; }
         public DateOnly NextTechnicalInspectionDate { get; private set; }
         public int NextServiceMileage { get; private set; }
         public DateOnly NextServiceDate { get; private set; }
@@ -51,7 +51,7 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
             CurrentMileage = currentMileage;
             FuelType = fuelType;
             TransmissionType = transmissionType;
-            Status = VehicleStatus.Available;
+            OperationalStatus = VehicleOperationalStatus.Active;
             NextTechnicalInspectionDate = nextTechnicalInspectionDate;
             NextServiceMileage = nextServiceMileage;
             NextServiceDate = nextServiceDate;
@@ -90,19 +90,9 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
             CurrentMileage = currentMileage;
         }
 
-        public void MarkAsUnavailable()
-        {
-            Status = VehicleStatus.Unavailable;
-        }
-
-        public void MarkAsAvailable()
-        {
-            Status = VehicleStatus.Available;
-        }
-
         public void Withdraw()
         {
-            Status = VehicleStatus.Withdrawn;
+            OperationalStatus = VehicleOperationalStatus.Withdrawn;
         }
     }
 }

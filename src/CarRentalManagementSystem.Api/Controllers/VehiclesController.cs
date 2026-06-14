@@ -1,6 +1,5 @@
 ﻿using CarRentalManagementSystem.Application.Vehicles.Create;
 using CarRentalManagementSystem.Application.Vehicles.Get;
-using CarRentalManagementSystem.Application.Vehicles.StatusUpdate;
 using CarRentalManagementSystem.Application.Vehicles.Update;
 using CarRentalManagementSystem.Application.Vehicles.UpdateMileage;
 using Microsoft.AspNetCore.Mvc;
@@ -16,8 +15,6 @@ namespace CarRentalManagementSystem.Api.Controllers
         private readonly GetVehicleByIdService _getVehicleByIdService;
         private readonly UpdateVehicleService _updateVehicleService;
         private readonly UpdateVehicleMileageService _updateVehicleMileageService;
-        private readonly MarkVehicleAvailableService _markVehicleAvailableService;
-        private readonly MarkVehicleUnavailableService _markVehicleUnavailableService;
         private readonly WithdrawVehicleService _withdrawVehicleService;
 
         public VehiclesController(
@@ -26,8 +23,6 @@ namespace CarRentalManagementSystem.Api.Controllers
             GetVehicleByIdService getVehicleByIdService,
             UpdateVehicleService updateVehicleService,
             UpdateVehicleMileageService updateVehicleMileageService,
-            MarkVehicleAvailableService markVehicleAvailableService,
-            MarkVehicleUnavailableService markVehicleUnavailableService,
             WithdrawVehicleService withdrawVehicleService)
         {
             _createVehicleService = createVehicleService;
@@ -35,8 +30,6 @@ namespace CarRentalManagementSystem.Api.Controllers
             _getVehicleByIdService = getVehicleByIdService;
             _updateVehicleService = updateVehicleService;
             _updateVehicleMileageService = updateVehicleMileageService;
-            _markVehicleAvailableService = markVehicleAvailableService;
-            _markVehicleUnavailableService = markVehicleUnavailableService;
             _withdrawVehicleService = withdrawVehicleService;
         }
 
@@ -99,30 +92,6 @@ namespace CarRentalManagementSystem.Api.Controllers
             await _updateVehicleMileageService.UpdateAsync(
                 id,
                 request,
-                cancellationToken);
-
-            return NoContent();
-        }
-
-        [HttpPatch("{id:guid}/available")]
-        public async Task<IActionResult> MarkAsAvailable(
-            Guid id,
-            CancellationToken cancellationToken)
-        {
-            await _markVehicleAvailableService.MarkAsAvailableAsync(
-                id,
-                cancellationToken);
-
-            return NoContent();
-        }
-
-        [HttpPatch("{id:guid}/unavailable")]
-        public async Task<IActionResult> MarkAsUnavailable(
-            Guid id,
-            CancellationToken cancellationToken)
-        {
-            await _markVehicleUnavailableService.MarkAsUnavailableAsync(
-                id,
                 cancellationToken);
 
             return NoContent();

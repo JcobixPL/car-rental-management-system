@@ -81,7 +81,7 @@ namespace CarRentalManagementSystem.Application.Vehicles.Create
                 vehicle.CurrentMileage,
                 vehicle.FuelType,
                 vehicle.TransmissionType,
-                vehicle.Status,
+                vehicle.OperationalStatus,
                 vehicle.NextTechnicalInspectionDate,
                 vehicle.NextServiceMileage,
                 vehicle.NextServiceDate);

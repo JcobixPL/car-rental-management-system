@@ -4,12 +4,9 @@ using System.Text;
 
 namespace CarRentalManagementSystem.Domain.Entities.Vehicles
 {
-    public enum VehicleStatus
+    public enum VehicleOperationalStatus
     {
-        Available = 1,
-        Reserved = 2,
-        Rented = 3,
-        Unavailable = 4,
-        Withdrawn = 5
+        Active = 1,
+        Withdrawn = 2
     }
 }

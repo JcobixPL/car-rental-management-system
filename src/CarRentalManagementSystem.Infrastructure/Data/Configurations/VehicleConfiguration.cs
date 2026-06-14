@@ -69,8 +69,8 @@ namespace CarRentalManagementSystem.Infrastructure.Data.Configurations
                 .IsRequired()
                 .HasMaxLength(20);
 
-            builder.Property(x => x.Status)
-                .HasColumnName("status")
+            builder.Property(x => x.OperationalStatus)
+                .HasColumnName("operational_status")
                 .HasConversion<string>()
                 .IsRequired()
                 .HasMaxLength(20);
