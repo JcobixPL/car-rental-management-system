@@ -28,7 +28,7 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
         public Vehicle(
             string vin,
             string registrationNumber,
-            string make,
+            string brand,
             string model,
             int productionYear,
             Guid vehicleCategoryId,
@@ -43,7 +43,7 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
             Id = Guid.NewGuid();
             Vin = vin;
             RegistrationNumber = registrationNumber;
-            Brand = make;
+            Brand = brand;
             Model = model;
             ProductionYear = productionYear;
             VehicleCategoryId = vehicleCategoryId;
@@ -60,12 +60,11 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
         public void UpdateDetails(
             string vin,
             string registrationNumber,
-            string make,
+            string brand,
             string model,
             int productionYear,
             Guid vehicleCategoryId,
             Guid currentBranchId,
-            int currentMileage,
             FuelType fuelType,
             TransmissionType transmissionType,
             DateOnly nextTechnicalInspectionDate,
@@ -74,12 +73,11 @@ namespace CarRentalManagementSystem.Domain.Entities.Vehicles
         {
             Vin = vin;
             RegistrationNumber = registrationNumber;
-            Brand = make;
+            Brand = brand;
             Model = model;
             ProductionYear = productionYear;
             VehicleCategoryId = vehicleCategoryId;
             CurrentBranchId = currentBranchId;
-            CurrentMileage = currentMileage;
             FuelType = fuelType;
             TransmissionType = transmissionType;
             NextTechnicalInspectionDate = nextTechnicalInspectionDate;

@@ -6,6 +6,11 @@ using CarRentalManagementSystem.Application.VehicleCategories.Create;
 using CarRentalManagementSystem.Application.VehicleCategories.Get;
 using CarRentalManagementSystem.Application.VehicleCategories.StatusUpdate;
 using CarRentalManagementSystem.Application.VehicleCategories.Update;
+using CarRentalManagementSystem.Application.Vehicles.Create;
+using CarRentalManagementSystem.Application.Vehicles.Get;
+using CarRentalManagementSystem.Application.Vehicles.StatusUpdate;
+using CarRentalManagementSystem.Application.Vehicles.Update;
+using CarRentalManagementSystem.Application.Vehicles.UpdateMileage;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CarRentalManagementSystem.Application
@@ -29,6 +34,16 @@ namespace CarRentalManagementSystem.Application
             services.AddScoped<UpdateVehicleCategoryService>();
             services.AddScoped<ActivateVehicleCategoryService>();
             services.AddScoped<DeactivateVehicleCategoryService>();
+
+            // Vehicles
+            services.AddScoped<CreateVehicleService>();
+            services.AddScoped<GetVehiclesService>();
+            services.AddScoped<GetVehicleByIdService>();
+            services.AddScoped<UpdateVehicleService>();
+            services.AddScoped<UpdateVehicleMileageService>();
+            services.AddScoped<MarkVehicleAvailableService>();
+            services.AddScoped<MarkVehicleUnavailableService>();
+            services.AddScoped<WithdrawVehicleService>();
 
             return services;
         }
